@@ -1,6 +1,6 @@
 package com.Appim.test;
 
-import java.net.MalformedURLException;
+import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -18,9 +18,9 @@ public class ecommerc_TC1 extends base {
 		return a;
 	}
 
-	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 
-		AndroidDriver<AndroidElement> driver = capabilities("General-Store.apk");
+		AndroidDriver<AndroidElement> driver = capabilities("generalStoreApk");
 		driver.findElement(MobileBy.AndroidUIAutomator(
 				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textMatches(\""
 						+ "Argentina" + "\").instance(0))"));
