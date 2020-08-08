@@ -1,8 +1,10 @@
 package com.Appim.test;
 
 import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import com.Appium.base.base;
 
@@ -18,7 +20,8 @@ public class ecommerc_TC1 extends base {
 		return a;
 	}
 
-	public static void main(String[] args) throws InterruptedException, IOException {
+	@Test
+	public void ecommerce() throws IOException, InterruptedException {
 
 		AndroidDriver<AndroidElement> driver = capabilities("generalStoreApk");
 		driver.findElement(MobileBy.AndroidUIAutomator(
@@ -53,6 +56,7 @@ public class ecommerc_TC1 extends base {
 
 		Assert.assertEquals(finalAmount, amountFinal);
 
+		System.out.println("Excecution Completed");
 	}
 
 }
