@@ -15,6 +15,7 @@ public class ApiDemo extends Base {
 	@Test
 	public void apiDemo() throws IOException {
 
+		service = startServer();
 		AndroidDriver<AndroidElement> driver = capabilities("apiDemoDebugApk");
 
 		ApiDemoHomePage apiHome = new ApiDemoHomePage(driver);
@@ -25,6 +26,8 @@ public class ApiDemo extends Base {
 		apiPref.getSettings().click();
 		apiPref.getTextField().sendKeys("hello");
 		apiPref.getButton().get(1).click();
+
+		service.stop();
 
 	}
 

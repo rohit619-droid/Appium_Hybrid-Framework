@@ -16,6 +16,7 @@ public class EcommerceApp extends Base {
 	@Test
 	public void ecommerce() throws IOException, InterruptedException {
 
+		service = startServer();
 		AndroidDriver<AndroidElement> driver = capabilities("generalStoreApk");
 
 		Utilities utils = new Utilities(driver);
@@ -50,6 +51,7 @@ public class EcommerceApp extends Base {
 		Assert.assertEquals(finalAmount, amountFinal);
 
 		System.out.println("Excecution Completed");
+		service.stop();
 	}
 
 }

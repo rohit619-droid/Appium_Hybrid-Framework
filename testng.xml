@@ -3,7 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.Appim.test.ecommerc_TC1"/>
+      <class name="com.Appim.test.ApiDemo"/>
+      <class name="com.Appim.test.EcommerceApp"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

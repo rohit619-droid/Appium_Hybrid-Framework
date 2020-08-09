@@ -3,6 +3,7 @@ package com.Appium.base;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.ServerSocket;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -12,8 +13,21 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class Base {
+	public static AppiumDriverLocalService service;
+
+//appium taskill - taskkll /F /IM node.exe
+	public AppiumDriverLocalService startServer() {
+
+		boolean flag = checkIfServerIsRunnning(4723);
+		if (!flag) {
+			service = AppiumDriverLocalService.buildDefaultService();
+			service.start();
+		}
+		return service;
+	}
 
 	public static AndroidDriver<AndroidElement> capabilities(String apkFile) throws IOException {
 		FileInputStream fis = new FileInputStream(
@@ -35,4 +49,20 @@ public class Base {
 		return driver;
 	}
 
+	public static boolean checkIfServerIsRunnning(int port) {
+
+		boolean isServerRunning = false;
+		ServerSocket serverSocket;
+		try {
+			serverSocket = new ServerSocket(port);
+
+			serverSocket.close();
+		} catch (IOException e) {
+			// If control comes here, then it means that the port is in use
+			isServerRunning = true;
+		} finally {
+			serverSocket = null;
+		}
+		return isServerRunning;
+	}
 }
