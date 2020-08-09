@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="43014" started-at="2020-08-08T15:39:12Z" finished-at="2020-08-08T15:39:55Z">
+  <suite name="Default suite" duration-ms="27084" started-at="2020-08-09T15:31:06Z" finished-at="2020-08-09T15:31:33Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="43014" started-at="2020-08-08T15:39:12Z" finished-at="2020-08-08T15:39:55Z">
-      <class name="com.Appim.test.ecommerc_TC1">
-        <test-method status="PASS" signature="ecommerce()[pri:0, instance:com.Appim.test.ecommerc_TC1@6ce139a4]" name="ecommerce" duration-ms="42964" started-at="2020-08-08T15:39:12Z" finished-at="2020-08-08T15:39:55Z">
+    <test name="Default test" duration-ms="27084" started-at="2020-08-09T15:31:06Z" finished-at="2020-08-09T15:31:33Z">
+      <class name="com.Appim.test.ApiDemo">
+        <test-method status="PASS" signature="apiDemo()[pri:0, instance:com.Appim.test.ApiDemo@5abca1e0]" name="apiDemo" duration-ms="27049" started-at="2020-08-09T15:31:06Z" finished-at="2020-08-09T15:31:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ecommerce -->
-      </class> <!-- com.Appim.test.ecommerc_TC1 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- apiDemo -->
+      </class> <!-- com.Appim.test.ApiDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

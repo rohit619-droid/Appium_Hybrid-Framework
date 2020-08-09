@@ -13,7 +13,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class base {
+public class Base {
 
 	public static AndroidDriver<AndroidElement> capabilities(String apkFile) throws IOException {
 		FileInputStream fis = new FileInputStream(
