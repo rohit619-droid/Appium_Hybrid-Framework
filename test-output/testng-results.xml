@@ -2,49 +2,24 @@
 <testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="65597" started-at="2020-08-09T19:00:40Z" finished-at="2020-08-09T19:01:45Z">
+  <suite name="Suite" duration-ms="3148" started-at="2020-08-10T16:37:49Z" finished-at="2020-08-10T16:37:53Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="65597" started-at="2020-08-09T19:00:40Z" finished-at="2020-08-09T19:01:45Z">
+    <test name="Test" duration-ms="3148" started-at="2020-08-10T16:37:49Z" finished-at="2020-08-10T16:37:53Z">
       <class name="com.Appim.test.EcommerceApp">
-        <test-method status="FAIL" signature="ecommerce()[pri:0, instance:com.Appim.test.EcommerceApp@4445629]" name="ecommerce" duration-ms="17366" started-at="2020-08-09T19:01:28Z" finished-at="2020-08-09T19:01:45Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
+        <test-method status="FAIL" signature="ecommerce()[pri:0, instance:com.Appim.test.EcommerceApp@3c9d0b9d]" name="ecommerce" duration-ms="13" started-at="2020-08-10T16:37:53Z" finished-at="2020-08-10T16:37:53Z">
+          <exception class="io.appium.java_client.service.local.InvalidNodeJSInstance">
             <message>
-              <![CDATA[Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-AIBD1RS', ip: '192.168.43.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-    at JWProxy.command (C:\Users\rohit\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\jsonwp-proxy\proxy.js:266:13)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-AIBD1RS', ip: '192.168.43.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver]]>
+              <![CDATA[Node.js is not installed!]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-AIBD1RS', ip: '192.168.43.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-    at JWProxy.command (C:\Users\rohit\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\jsonwp-proxy\proxy.js:266:13)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-AIBD1RS', ip: '192.168.43.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:84)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:94)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:95)
-at com.Appium.base.Base.capabilities(Base.java:47)
-at com.Appim.test.EcommerceApp.ecommerce(EcommerceApp.java:20)
+              <![CDATA[io.appium.java_client.service.local.InvalidNodeJSInstance: Node.js is not installed!
+at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:225)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:86)
+at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:82)
+at com.Appium.base.Base.startServer(Base.java:26)
+at com.Appim.test.EcommerceApp.ecommerce(EcommerceApp.java:19)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -70,50 +45,37 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.reflect.InvocationTargetException
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-... 39 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-AIBD1RS', ip: '192.168.43.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
-Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: socket hang up
-    at JWProxy.command (C:\Users\rohit\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\jsonwp-proxy\proxy.js:266:13)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-... 44 more
+Caused by: java.lang.NullPointerException: Unable to find executable for: node.exe
+at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:987)
+at org.openqa.selenium.os.OsProcess.<init>(OsProcess.java:64)
+at org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:38)
+at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:219)
+... 30 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- io.appium.java_client.service.local.InvalidNodeJSInstance -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ecommerce -->
       </class> <!-- com.Appim.test.EcommerceApp -->
       <class name="com.Appim.test.ApiDemo">
-        <test-method status="FAIL" signature="apiDemo()[pri:0, instance:com.Appim.test.ApiDemo@18ce0030]" name="apiDemo" duration-ms="48180" started-at="2020-08-09T19:00:40Z" finished-at="2020-08-09T19:01:28Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="killTask()[pri:0, instance:com.Appim.test.ApiDemo@6dbb137d]" name="killTask" is-config="true" duration-ms="3017" started-at="2020-08-10T16:37:49Z" finished-at="2020-08-10T16:37:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- killTask -->
+        <test-method status="FAIL" signature="apiDemo()[pri:0, instance:com.Appim.test.ApiDemo@6dbb137d]" name="apiDemo" duration-ms="90" started-at="2020-08-10T16:37:52Z" finished-at="2020-08-10T16:37:53Z">
+          <exception class="io.appium.java_client.service.local.InvalidNodeJSInstance">
+            <message>
+              <![CDATA[Node.js is not installed!]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.Appim.test.ApiDemo.apiDemo(ApiDemo.java:30)
+              <![CDATA[io.appium.java_client.service.local.InvalidNodeJSInstance: Node.js is not installed!
+at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:225)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:86)
+at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:82)
+at com.Appium.base.Base.startServer(Base.java:26)
+at com.Appim.test.ApiDemo.apiDemo(ApiDemo.java:26)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -139,9 +101,15 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException: Unable to find executable for: node.exe
+at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:987)
+at org.openqa.selenium.os.OsProcess.<init>(OsProcess.java:64)
+at org.openqa.selenium.os.CommandLine.<init>(CommandLine.java:38)
+at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:219)
+... 30 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- io.appium.java_client.service.local.InvalidNodeJSInstance -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- apiDemo -->

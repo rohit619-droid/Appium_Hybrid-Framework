@@ -29,7 +29,14 @@ public class Base {
 		return service;
 	}
 
-	public static AndroidDriver<AndroidElement> capabilities(String apkFile) throws IOException {
+	public static void startEmulator() throws IOException, InterruptedException {
+
+		Runtime.getRuntime()
+				.exec(System.getProperty("user.dir") + "\\src\\main\\java\\com\\Appium\\resources\\startEmulator.bat");
+		Thread.sleep(6000);
+	}
+
+	public static AndroidDriver<AndroidElement> capabilities(String apkFile) throws IOException, InterruptedException {
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\com\\Appium\\resources\\global.properties");
 		Properties prop = new Properties();
@@ -40,6 +47,9 @@ public class Base {
 
 		DesiredCapabilities cap = new DesiredCapabilities();
 		String device = (String) prop.get("device");
+		if (device.contains("rohit")) {
+			startEmulator();
+		}
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);

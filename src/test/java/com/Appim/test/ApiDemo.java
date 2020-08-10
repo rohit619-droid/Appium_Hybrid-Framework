@@ -2,6 +2,7 @@ package com.Appim.test;
 
 import java.io.IOException;
 
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.Appium.base.Base;
 import com.Appium.objectRepository.ApiDemoHomePage;
@@ -12,8 +13,15 @@ import io.appium.java_client.android.AndroidElement;
 
 public class ApiDemo extends Base {
 
+	@BeforeTest
+	public void killTask() throws IOException, InterruptedException {
+
+		Runtime.getRuntime().exec("taskkill /F /IM node.exe");
+		Thread.sleep(3000);
+	}
+
 	@Test
-	public void apiDemo() throws IOException {
+	public void apiDemo() throws IOException, InterruptedException {
 
 		service = startServer();
 		AndroidDriver<AndroidElement> driver = capabilities("apiDemoDebugApk");

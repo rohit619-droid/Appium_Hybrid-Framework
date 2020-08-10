@@ -10,6 +10,7 @@
       </class> <!-- com.Appim.test.EcommerceApp -->
       <class name="com.Appim.test.ApiDemo">
         <methods>
+          <include name="killTask"/>
           <include name="apiDemo"/>
         </methods>
       </class> <!-- com.Appim.test.ApiDemo -->
