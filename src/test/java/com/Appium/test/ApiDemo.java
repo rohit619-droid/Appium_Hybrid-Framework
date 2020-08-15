@@ -1,4 +1,4 @@
-package com.Appim.test;
+package com.Appium.test;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ public class ApiDemo extends Base {
 
 	@BeforeTest
 	public void killTask() throws IOException, InterruptedException {
-
+		System.out.println("in");
 		Runtime.getRuntime().exec("taskkill /F /IM node.exe");
 		Thread.sleep(3000);
 	}

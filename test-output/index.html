@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,15 +102,24 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Appim.test.ApiDemo" hash-for-method="apiDemo">apiDemo</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Appim.test.EcommerceApp" hash-for-method="ecommerce">ecommerce</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Appium.test.EcommerceApp" hash-for-method="ecommerce">ecommerce</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.Appium.test.ApiDemo" hash-for-method="apiDemo">apiDemo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -125,7 +134,7 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.Appim.test.EcommerceApp</span>
+              <span class="class-name">com.Appium.test.EcommerceApp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -133,29 +142,19 @@
                   <a name="ecommerce">
                   </a> <!-- ecommerce -->
                   <span class="method-name">ecommerce</span>
-                  <div class="stack-trace">io.appium.java_client.service.local.InvalidNodeJSInstance: Node.js is not installed!
-	at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:225)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:86)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:82)
-	at com.Appium.base.Base.startServer(Base.java:26)
-	at com.Appim.test.EcommerceApp.ecommerce(EcommerceApp.java:19)
-Caused by: java.lang.NullPointerException: Unable to find executable for: node.exe
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:987)
-	at org.openqa.selenium.os.OsProcess.&lt;init&gt;(OsProcess.java:64)
-	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
-	at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:219)
-	... 30 more
-... Removed 25 stack frames
+                  <div class="stack-trace">java.lang.AssertionError: expected [$ 280.97] but found [$s 280.97]
+	at com.Appium.test.EcommerceApp.ecommerce(EcommerceApp.java:53)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.Appim.test.ApiDemo</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.Appium.test.ApiDemo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -163,25 +162,10 @@ Caused by: java.lang.NullPointerException: Unable to find executable for: node.e
                   <a name="apiDemo">
                   </a> <!-- apiDemo -->
                   <span class="method-name">apiDemo</span>
-                  <div class="stack-trace">io.appium.java_client.service.local.InvalidNodeJSInstance: Node.js is not installed!
-	at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:225)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.buildService(AppiumDriverLocalService.java:86)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:82)
-	at com.Appium.base.Base.startServer(Base.java:26)
-	at com.Appim.test.ApiDemo.apiDemo(ApiDemo.java:26)
-Caused by: java.lang.NullPointerException: Unable to find executable for: node.exe
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:987)
-	at org.openqa.selenium.os.OsProcess.&lt;init&gt;(OsProcess.java:64)
-	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
-	at io.appium.java_client.service.local.AppiumServiceBuilder.findDefaultExecutable(AppiumServiceBuilder.java:219)
-	... 30 more
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -190,12 +174,15 @@ Caused by: java.lang.NullPointerException: Unable to find executable for: node.e
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.Appium.resources.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.Appim.test.ApiDemo&quot;/&gt;
-      &lt;class name=&quot;com.Appim.test.EcommerceApp&quot;/&gt;
+      &lt;class name=&quot;com.Appium.test.ApiDemo&quot;/&gt;
+      &lt;class name=&quot;com.Appium.test.EcommerceApp&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -238,17 +225,17 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'apiDemo')
-data.setCell(0, 2, 'com.Appim.test.ApiDemo')
-data.setCell(0, 3, 90);
+data.setCell(0, 2, 'com.Appium.test.ApiDemo')
+data.setCell(0, 3, 47669);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'ecommerce')
-data.setCell(1, 2, 'com.Appim.test.EcommerceApp')
-data.setCell(1, 3, 13);
+data.setCell(1, 2, 'com.Appium.test.EcommerceApp')
+data.setCell(1, 3, 43641);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 103 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -274,25 +261,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.Appim.test.ApiDemo</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.Appium.test.ApiDemo</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">killTask</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">apiDemo</span>
-                <span class="method-start">3033 ms</span>
+                <span class="method-start">3122 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.Appim.test.EcommerceApp</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.Appium.test.EcommerceApp</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">ecommerce</span>
-                <span class="method-start">3130 ms</span>
+                <span class="method-start">50805 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

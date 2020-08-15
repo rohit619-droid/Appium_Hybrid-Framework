@@ -1,8 +1,10 @@
-package com.Appim.test;
+package com.Appium.test;
 
 import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import com.Appium.base.Base;
 import com.Appium.objectRepository.EcomCheckoutPage;
 import com.Appium.objectRepository.EcomMainPage;

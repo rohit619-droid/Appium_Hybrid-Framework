@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="com.Appim.test.ApiDemo"/>
-      <class name="com.Appim.test.EcommerceApp"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<!-- Suite -->
+
+	<listeners>
+		<listener class-name="com.Appium.resources.Listeners" />
+	</listeners>
+	<test name="Test" thread-count="5">
+
+		<classes>
+			<class name="com.Appium.test.ApiDemo" />
+			<class name="com.Appium.test.EcommerceApp" />
+		</classes>
+	</test>
+	<!-- Test -->
+</suite>
