@@ -9,6 +9,7 @@ import com.Appium.base.Base;
 import com.Appium.objectRepository.EcomCheckoutPage;
 import com.Appium.objectRepository.EcomMainPage;
 import com.Appium.objectRepository.EcomProductsPage;
+import com.Appium.utils.TestData;
 import com.Appium.utils.Utilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -16,8 +17,8 @@ import io.appium.java_client.android.AndroidElement;
 public class EcommerceApp extends Base {
 	public AndroidDriver<AndroidElement> driver;
 
-	@Test
-	public void ecommerce() throws IOException, InterruptedException {
+	@Test(dataProvider = "input", dataProviderClass = TestData.class)
+	public void ecommerce(String data) throws IOException, InterruptedException {
 
 		service = startServer();
 		driver = capabilities("generalStoreApk");
@@ -26,7 +27,7 @@ public class EcommerceApp extends Base {
 		utils.getScroll("Argentina");
 		utils.getCountry("Argentina").click();
 		EcomMainPage eHome = new EcomMainPage(driver);
-		eHome.getEnter().sendKeys("hello");
+		eHome.getEnter().sendKeys(data);
 		driver.hideKeyboard();
 		eHome.getRadioButton().click();
 		eHome.getShop().click();
