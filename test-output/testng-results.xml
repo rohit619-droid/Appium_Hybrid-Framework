@@ -1,50 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="96036" started-at="2020-08-15T22:51:58 IST" finished-at="2020-08-15T22:53:34 IST">
+  <suite name="Suite" duration-ms="86227" started-at="2020-08-16T14:03:55 IST" finished-at="2020-08-16T14:05:21 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="96036" started-at="2020-08-15T22:51:58 IST" finished-at="2020-08-15T22:53:34 IST">
+    <test name="Test" duration-ms="86227" started-at="2020-08-16T14:03:55 IST" finished-at="2020-08-16T14:05:21 IST">
       <class name="com.Appium.test.ApiDemo">
-        <test-method status="PASS" signature="killTask()[pri:0, instance:com.Appium.test.ApiDemo@7113b13f]" name="killTask" is-config="true" duration-ms="3086" started-at="2020-08-15T22:51:58 IST" finished-at="2020-08-15T22:52:01 IST">
+        <test-method status="PASS" signature="killTask()[pri:0, instance:com.Appium.test.ApiDemo@42d8062c]" name="killTask" is-config="true" duration-ms="3021" started-at="2020-08-16T14:03:55 IST" finished-at="2020-08-16T14:03:58 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killTask -->
-        <test-method status="PASS" signature="apiDemo()[pri:0, instance:com.Appium.test.ApiDemo@7113b13f]" name="apiDemo" duration-ms="47669" started-at="2020-08-15T22:52:01 IST" finished-at="2020-08-15T22:52:48 IST">
+        <test-method status="PASS" signature="apiDemo()[pri:0, instance:com.Appium.test.ApiDemo@42d8062c]" name="apiDemo" duration-ms="38612" started-at="2020-08-16T14:03:58 IST" finished-at="2020-08-16T14:04:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- apiDemo -->
-      </class> <!-- com.Appium.test.ApiDemo -->
-      <class name="com.Appium.test.EcommerceApp">
-        <test-method status="FAIL" signature="ecommerce()[pri:0, instance:com.Appium.test.EcommerceApp@45820e51]" name="ecommerce" duration-ms="43641" started-at="2020-08-15T22:52:49 IST" finished-at="2020-08-15T22:53:32 IST">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.Appium.test.ApiDemo@42d8062c]" name="tearDown" is-config="true" duration-ms="1018" started-at="2020-08-16T14:05:20 IST" finished-at="2020-08-16T14:05:21 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[expected [$ 280.97] but found [$s 280.97]]]>
+              <![CDATA[Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AIBD1RS', ip: '192.168.43.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [$ 280.97] but found [$s 280.97]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at com.Appium.test.EcommerceApp.ecommerce(EcommerceApp.java:53)
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-AIBD1RS', ip: '192.168.43.74', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: RemoteWebDriver
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
+at java.util.Optional.orElseGet(Unknown Source)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:46)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
+at com.Appium.test.ApiDemo.tearDown(ApiDemo.java:46)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.afterRun(TestRunner.java:853)
+at org.testng.TestRunner.run(TestRunner.java:594)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
 at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
 at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
@@ -58,12 +61,54 @@ at org.testng.TestNG.run(TestNG.java:1000)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: connect
+at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+at java.net.PlainSocketImpl.connect(Unknown Source)
+at java.net.SocksSocketImpl.connect(Unknown Source)
+at java.net.Socket.connect(Unknown Source)
+at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+... 30 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.Appium.test.ApiDemo -->
+      <class name="com.Appium.test.EcommerceApp">
+        <test-method status="PASS" signature="ecommerce()[pri:0, instance:com.Appium.test.EcommerceApp@6043cd28]" name="ecommerce" duration-ms="43499" started-at="2020-08-16T14:04:37 IST" finished-at="2020-08-16T14:05:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ecommerce -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.Appium.test.EcommerceApp@6043cd28]" name="tearDown" is-config="true" duration-ms="-1597566921645" started-at="2020-08-16T14:05:21 IST" finished-at="1970-01-01T05:30:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.Appium.test.EcommerceApp -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

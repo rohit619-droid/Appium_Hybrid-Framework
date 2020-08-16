@@ -39,7 +39,7 @@ public class Utilities {
 
 	public static void getScreenshot(String s) throws IOException {
 		File scrfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrfile, new File(System.getProperty("user.dir") + "\\" + s + ".png"));
+		FileUtils.copyFile(scrfile, new File(System.getProperty("user.dir") + "\\src\\main\\java\\Screenshots" + s + ".png"));
 	}
 
 

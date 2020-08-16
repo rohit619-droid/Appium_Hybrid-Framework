@@ -12,7 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 public class ApiDemo extends Base {
-
+	public  AndroidDriver<AndroidElement> driver;
 	@BeforeTest
 	public void killTask() throws IOException, InterruptedException {
 		System.out.println("in");
@@ -24,7 +24,7 @@ public class ApiDemo extends Base {
 	public void apiDemo() throws IOException, InterruptedException {
 
 		service = startServer();
-		AndroidDriver<AndroidElement> driver = capabilities("apiDemoDebugApk");
+		driver = capabilities("apiDemoDebugApk");
 
 		ApiDemoHomePage apiHome = new ApiDemoHomePage(driver);
 		apiHome.getpref().click();
@@ -36,7 +36,10 @@ public class ApiDemo extends Base {
 		apiPref.getButton().get(1).click();
 
 		service.stop();
+		
 
 	}
+	
+	
 
 }

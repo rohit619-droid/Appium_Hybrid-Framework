@@ -14,12 +14,13 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
 public class EcommerceApp extends Base {
+	public AndroidDriver<AndroidElement> driver;
 
 	@Test
 	public void ecommerce() throws IOException, InterruptedException {
 
 		service = startServer();
-		AndroidDriver<AndroidElement> driver = capabilities("generalStoreApk");
+		driver = capabilities("generalStoreApk");
 
 		Utilities utils = new Utilities(driver);
 		utils.getScroll("Argentina");

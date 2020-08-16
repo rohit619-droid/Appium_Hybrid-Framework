@@ -17,7 +17,6 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 public class Base {
 	public static AppiumDriverLocalService service;
-	public static AndroidDriver<AndroidElement> driver;
 
 //appium taskill - taskkll /F /IM node.exe
 	public AppiumDriverLocalService startServer() {
@@ -46,6 +45,7 @@ public class Base {
 	}
 
 	public static AndroidDriver<AndroidElement> capabilities(String apkFile) throws IOException, InterruptedException {
+		AndroidDriver<AndroidElement> driver;
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\main\\java\\com\\Appium\\resources\\global.properties");
 		Properties prop = new Properties();
@@ -84,5 +84,4 @@ public class Base {
 		return isServerRunning;
 	}
 
-	
 }

@@ -5,6 +5,8 @@
 
 	<listeners>
 		<listener class-name="com.Appium.resources.Listeners" />
+		<listener class-name="com.Appium.resources.ExtentReporterNG" />
+
 	</listeners>
 	<test name="Test" thread-count="5">
 
