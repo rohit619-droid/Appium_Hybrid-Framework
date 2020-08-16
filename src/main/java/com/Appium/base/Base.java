@@ -23,7 +23,7 @@ public class Base {
 
 		boolean flag = checkIfServerIsRunnning(4723);
 		File file = new File("C:\\Users\\rohit\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\appium.js");
-		System.out.println("TIs == > " + file.getName());
+		System.out.println("Ts == > " + file.getName());
 		System.out.println("Boolean == > " + file.exists());
 		if (!flag) {
 			service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
@@ -54,7 +54,9 @@ public class Base {
 		File fs = new File(f, (String) prop.get(apkFile));
 
 		DesiredCapabilities cap = new DesiredCapabilities();
-		String device = (String) prop.get("device");
+		// String device = (String) prop.get("device");
+		// mvn test -DdeviceName=rohit (Command to run in specific device)
+		String device = System.getProperty("deviceName");
 		if (device.contains("rohit")) {
 			startEmulator();
 		}
