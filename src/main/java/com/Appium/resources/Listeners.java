@@ -32,6 +32,7 @@ public class Listeners implements ITestListener {
 		String s = result.getName();
 		try {
 			Utilities.getScreenshot(s);
+			System.out.println("SSname=============================>>"+s);
 		} catch (IOException e) {
 			System.out.println(e);
 		}

@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.Appium.base.Base;
 import com.Appium.objectRepository.EcomCheckoutPage;
 import com.Appium.objectRepository.EcomMainPage;

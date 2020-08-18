@@ -8,7 +8,6 @@ import com.Appium.base.Base;
 import com.Appium.objectRepository.ApiDemoHomePage;
 import com.Appium.objectRepository.ApiDemoPreferencesPage;
 import com.Appium.utils.TestData;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 

@@ -7,11 +7,12 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.Appium.test.EcommerceApp">
+      <class name="com.Appium.test.ApiDemo">
         <methods>
-          <include name="ecommerce"/>
+          <include name="apiDemo" invocation-numbers="0"/>
+          <include name="killTask"/>
         </methods>
-      </class> <!-- com.Appium.test.EcommerceApp -->
+      </class> <!-- com.Appium.test.ApiDemo -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

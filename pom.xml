@@ -55,7 +55,6 @@
 
 				<configuration>
 
-
 					<suiteXmlFiles>
 
 						<suiteXmlFile>testng.xml</suiteXmlFile>
@@ -83,7 +82,7 @@
 
 			<artifactId>testng</artifactId>
 
-			<version>6.14.3</version>
+			<version>6.8</version>
 
 		</dependency>
 

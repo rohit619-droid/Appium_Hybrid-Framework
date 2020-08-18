@@ -11,12 +11,13 @@ import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
+import io.appium.java_client.android.AndroidElement;
 
 public class Utilities {
-   
-	public static AppiumDriver<?> driver;
 
-	public Utilities(AppiumDriver<?> driver) {
+	public static AppiumDriver<AndroidElement> driver;
+
+	public Utilities(AppiumDriver<AndroidElement> driver) {
 		Utilities.driver = driver;
 	}
 
@@ -39,8 +40,8 @@ public class Utilities {
 
 	public static void getScreenshot(String s) throws IOException {
 		File scrfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrfile, new File(System.getProperty("user.dir") + "\\src\\main\\java\\Screenshots" + s + ".png"));
+		FileUtils.copyFile(scrfile,
+				new File(System.getProperty("user.dir") + "\\src\\main\\java\\Screenshots" + s + ".png"));
 	}
-
 
 }
