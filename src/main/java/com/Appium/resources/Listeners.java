@@ -33,7 +33,7 @@ public class Listeners implements ITestListener {
 		try {
 			Utilities.getScreenshot(s);
 			System.out.println("SSname=============================>>"+s);
-		} catch (IOException e) {
+		} catch (IOException | NullPointerException e) {
 			System.out.println(e);
 		}
 

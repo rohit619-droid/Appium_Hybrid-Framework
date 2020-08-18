@@ -46,7 +46,7 @@ public class EcommerceApp extends Base {
 			sum = sum + amount;
 		}
 
-		String finalAmount = "$" + " " + sum;
+		String finalAmount = "$b" + " " + sum;
 
 		String amountFinal = eCheck.getTotalAmount().getText();
 		System.out.println(amountFinal);

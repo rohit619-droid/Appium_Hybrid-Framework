@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.URL;
+import java.util.Objects;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -22,7 +23,7 @@ public class Base {
 	public AppiumDriverLocalService startServer() {
 
 		boolean flag = checkIfServerIsRunnning(4723);
-		File file = new File("C:\\Users\\rohit\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\appium.js");
+		File file = new File("C:\\Users\\rohit\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js");
 		System.out.println("TIs == > " + file.getName());
 		System.out.println("Boolean == > " + file.exists());
 		if (!flag) {
@@ -34,6 +35,7 @@ public class Base {
 			service.start();
 			System.out.println("Start");
 		}
+		System.out.println("service alive oir dead============>" + service == null);
 		return service;
 	}
 
@@ -54,10 +56,12 @@ public class Base {
 		File fs = new File(f, (String) prop.get(apkFile));
 
 		DesiredCapabilities cap = new DesiredCapabilities();
-		//String device = (String) prop.get("device");
-		//mvn test -Ddevicename=rohit
+		// String device = (String) prop.get("device");
+		// mvn test -Ddevicename=rohit
 		String device = System.getProperty("deviceName");
-		if (device.contains("rohit")) {
+		// obj.isnull
+		// CollectionUtils, StringUtils, Apachecommon 4
+		if (Objects.nonNull(device) && device.equalsIgnoreCase("rohit")) {
 			startEmulator();
 		}
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);

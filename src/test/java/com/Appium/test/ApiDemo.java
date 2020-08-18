@@ -17,6 +17,7 @@ public class ApiDemo extends Base {
 	public void killTask() throws IOException, InterruptedException {
 		System.out.println("in");
 		Runtime.getRuntime().exec("taskkill /F /IM node.exe");
+		System.out.println("server killed");
 		Thread.sleep(3000);
 	}
 	
